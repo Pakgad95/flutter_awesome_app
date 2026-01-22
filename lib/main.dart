@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_awesome_app/views/home_ui.dart';
+import 'package:flutter_awesome_app/views/login_ui.dart';
+import 'package:flutter_awesome_app/views/singup_ui.dart';
 
-
-  void main() {
-    runApp(
-      FlutterAwesomeApp(),
-    );
-  }
+void main() {
+  runApp(
+    const FlutterAwesomeApp(),
+  );
+}
 
 
   class FlutterAwesomeApp extends StatefulWidget {
@@ -21,7 +22,7 @@ class _FlutterAwesomeAppState extends State<FlutterAwesomeApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeUi(),
+      home: LoginUi(),
       theme: ThemeData(
         
 

@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_awesome_app/views/login_ui.dart';
+import 'package:flutter_awesome_app/views/singup_ui.dart';
 
 class HomeUi extends StatelessWidget {
   const HomeUi({super.key});
@@ -13,7 +15,7 @@ class HomeUi extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 20.0,
+              height: 50.0,
             ),
             Image.asset(
               'assets/images/logo.png',
@@ -22,7 +24,7 @@ class HomeUi extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             SizedBox(
-              height: 10.0,
+              height: 50.0,
             ),
             Text(
               'ยินดีต้อนรับ DTI - SAU',
@@ -55,7 +57,14 @@ class HomeUi extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push( // ไปยังหน้า LoginUi
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginUi(),
+                      ),
+                    );
+                  },
                   style: OutlinedButton.styleFrom(
                     fixedSize: const Size(150.0, 50.0),
                     shape: RoundedRectangleBorder(
@@ -77,7 +86,14 @@ class HomeUi extends StatelessWidget {
 
                 
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                     Navigator.push( // ไปยังหน้า SingupUi
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SingupUi(),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(150.0, 50.0),
                     shape: RoundedRectangleBorder(
